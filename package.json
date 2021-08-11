@@ -1,6 +1,6 @@
 {
   "name": "cat-cli-app",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Application to manipulate with files using params in CLI",
   "main": "CatCLI.js",
   "scripts": {
