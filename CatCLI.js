@@ -6,13 +6,15 @@ const CatCLI = new CLIApplication("CatCLI", require("process"), [
     Message: "Shows Suported Params",
     CallBack: () => {
       const fs = require("fs");
-      try {
-        const data = fs.readFileSync("help.txt", "utf8");
-        console.log(data);
-      } catch (err) {
-        console.error(err);
-      }
-    },
+      const path = require('path');
+      fs.readFile(path.join(__dirname, 'help.txt'), "utf8", (err, data) => {
+        if (err) {
+          console.error("Couldn't read file. " + err);
+        } else {
+          console.log(data);
+        }
+      });
+    }
   },
   {
     Switch: "--createFile",
@@ -24,7 +26,7 @@ const CatCLI = new CLIApplication("CatCLI", require("process"), [
         if (err) {
           console.error("Couldn't create file. " + err);
         } else {
-          console.log("File was updated.");
+          console.log("File was created.");
         }
       });
     },
