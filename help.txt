@@ -10,5 +10,5 @@ node "jsFile" --listFiles "directory"                     Show list of files in 
 node "jsFile" --copyFile "source.txt" "copy.txt"          Copy file, it the name of the copy file is missing, postfix _copy is added to the source file's name
 node "jsFile" --movefile "from/file.txt" "to/file.txt"    Move file to the different directory
 node "jsFile" --size "file.txt"                           Show the size of the file
-node "jsFile" --view "somefile"                           Show the content of the file
-node "jsFile" --view "somefile" --pause "22"              Show the content of the file, after 22 lines make a pause
+node "jsFile" --view "file.txt"                           Show the content of the file
+node "jsFile" --view "file.txt" --pause "22"              Show the content of the file, after 22 lines make a pause

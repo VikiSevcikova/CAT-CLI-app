@@ -1,10 +1,10 @@
-Install package:
-npm install cat-cli-app
+Install module:
+<code>npm install cat-cli-app</code>
 
 Import the module in the js file:
-const cli = require('cat-cli-app');
+<code>const cli = require('cat-cli-app');</code>
 
 In the terminal call the js file with params:
-node "jsfile" --help
+<code>node "jsfile" --help</code>
 or
-node "jsfile" --createFile
+<code>node "jsfile" --createFile</code>

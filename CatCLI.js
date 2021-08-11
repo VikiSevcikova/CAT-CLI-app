@@ -69,7 +69,15 @@ const CatCLI = new CLIApplication("CatCLI", require("process"), [
     Message: "Rename File",
     CallBack: (data) => {
       const fs = require("fs");
-      console.log(rename)
+      const oldName = data[0];
+      const newName = data[1];
+      fs.rename(oldName, newName, (err) => {
+        if (err) {
+          console.log("Couldn't rename the file." + err);
+        } else {
+          console.error("File was renamed.");
+        }
+      });
     },
   },
   {
