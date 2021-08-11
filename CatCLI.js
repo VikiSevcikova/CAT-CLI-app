@@ -1,6 +1,6 @@
-let CLIApplication = require("./CLIApplication");
+const CLIApplication = require("./CLIApplication");
 
-let CatCLI = new CLIApplication("CatCLI", require("process"), [
+const CatCLI = new CLIApplication("CatCLI", require("process"), [
   {
     Switch: "--help",
     Message: "Shows Suported Params",
@@ -212,5 +212,6 @@ let CatCLI = new CLIApplication("CatCLI", require("process"), [
   },
 ]);
 
-
 CatCLI.checkParams();
+
+module.exports = CatCLI;

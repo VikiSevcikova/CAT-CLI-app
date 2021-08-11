@@ -1,0 +1,23 @@
+{
+  "name": "cat-cli-app",
+  "version": "1.0.0",
+  "description": "Application to manipulate with files using params in CLI",
+  "main": "CatCLI.js",
+  "scripts": {
+    "test": "node CatCLI.js --help"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VikiSevcikova/CAT-CLI-app.git"
+  },
+  "keywords": [
+    "cat",
+    "cli"
+  ],
+  "author": "Viktoria Sevcikova",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VikiSevcikova/CAT-CLI-app/issues"
+  },
+  "homepage": "https://github.com/VikiSevcikova/CAT-CLI-app#readme"
+}
