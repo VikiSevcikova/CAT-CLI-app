@@ -180,7 +180,8 @@ let CatCLI = new CLIApplication("CatCLI", require("process"), [
             for(let i = 0; i < lines.length; i++){
                 console.log(i)
                 if(i === parseInt(lineToPause)){
-                    wait(); // wait for 10seconds
+                    console.log("PAUSE")
+                    setTimeout(()=>{console.log("RESUME")}, 10000); // wait for 10seconds
                 }else{
                     console.log(lines[i]);
                 }
