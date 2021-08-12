@@ -66,22 +66,3 @@ class CLIApplication {
 }
 
 module.exports = CLIApplication;
-
-
-//  //if there is command with more parameters it is expected to be in quotes seperated with space for example "-cf /Documents"
-//  let suppliedParams = this.suppliedParamaters[i].split(" ");
-//  let suppliedParamsRest = suppliedParams.slice(1, suppliedParams.length);
-//  console.log(this.suppliedParams);
-//  console.log(this.suppliedParamsRest);
-
-//  if (
-//    suppliedParams &&
-//    suppliedParams[0] === this.supportedParamaters[j].Switch &&
-//    suppliedParamsRest.length !== 0
-//  ) {
-//    this.supportedParamaters[j].CallBack(suppliedParamsRest);
-//  } else if (
-//    this.suppliedParamaters[i] === this.supportedParamaters[j].Switch
-//  ) {
-//    this.supportedParamaters[j].CallBack(this);
-//  }

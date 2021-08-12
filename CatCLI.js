@@ -179,7 +179,6 @@ const CatCLI = new CLIApplication("CatCLI", require("process"), [
     Message: "View File",
     CallBack: (data) => {
         const fs = require("fs");
-        // const readline = require('readline');
         const file = data[0];
         const pause = data[1] === "--pause" ? true : false;
         const lineToPause = data[2] ? parseInt(data[2]) : null;
@@ -199,27 +198,6 @@ const CatCLI = new CLIApplication("CatCLI", require("process"), [
                 wait(i,ls);
             }
         }
-
-
-        // const readLine = readline.createInterface({
-        //     input: fs.createReadStream(file),
-        //     output: process.stdout,
-        //     terminal: false
-        // });
-
-        // readLine.on('line', (line) => {
-        //     countLines++;
-        //     console.log(line);
-        //     // console.log(countLines);
-        //     if (lineToPause && countLines === parseInt(lineToPause)) {
-        //       console.log("Pausing stream");
-        //       readLine.pause();
-        //     }
-        //   })
-        //   .on('pause', ()=>{
-        //     setTimeout(()=>{readLine.resume();}, 10000);
-        //     countLines=0;
-        //   })
       },
   },
 ]);
