@@ -1,5 +1,13 @@
 const CLIApplication = require("./CLIApplication");
 
+const wait = (i,lines) => {
+  setTimeout(()=>{
+  for(let i = 0; i < lines.length; i++){
+    console.log(lines[i]);
+  }
+}, i*1000);
+}
+
 const CatCLI = new CLIApplication("CatCLI", require("process"), [
   {
     Switch: "--help",
@@ -172,10 +180,9 @@ const CatCLI = new CLIApplication("CatCLI", require("process"), [
     CallBack: (data) => {
         const fs = require("fs");
         // const readline = require('readline');
-        // let countLines = 0;
         const file = data[0];
         const pause = data[1] === "--pause" ? true : false;
-        const lineToPause = data[2] ? data[2] : null;
+        const lineToPause = data[2] ? parseInt(data[2]) : null;
 
         if(!pause){
             fs.readFile(file, 'utf8', (err, data) => {
@@ -187,14 +194,9 @@ const CatCLI = new CLIApplication("CatCLI", require("process"), [
               });
         }else{
             const lines = fs.readFileSync(file, 'utf-8').split(/\r?\n/);
-            for(let i = 0; i < lines.length; i++){
-                console.log(i)
-                if(i === parseInt(lineToPause)){
-                    console.log("PAUSE")
-                    setTimeout(()=>{console.log("RESUME")}, 10000); // wait for 10seconds
-                }else{
-                    console.log(lines[i]);
-                }
+            for(let i = 0; i < lines.length/lineToPause; i++){
+                let ls = lines.slice(i*lineToPause, (i+1)*lineToPause);
+                wait(i,ls);
             }
         }
 
