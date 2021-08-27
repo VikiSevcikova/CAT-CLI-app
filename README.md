@@ -1,3 +1,7 @@
+https://www.npmjs.com/package/cat-cli-app
+
+Project to demonstrate the use of node js modules.
+
 Install module: </br>
 <code>npm install cat-cli-app</code>
 </br>
